@@ -1,5 +1,11 @@
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<style>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Bubble Shooter Game</title>
+  <link rel="icon" type="image/x-icon" href="Bubble Shooter Game.png">
+	<style>
 *{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
 /*#root{width:27%;font-family:system-ui,sans-serif;background:#080818;border-radius:14px;overflow:hidden;touch-action:none}*/
 #root{
@@ -23,7 +29,6 @@
   }
 }
 
-
 body{
   display:flex;
   justify-content:center;
@@ -31,6 +36,8 @@ body{
   min-height:100vh;
   background:#707070;
   background-image: url("bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 #canvasWrap{
   width:100%;
@@ -78,8 +85,8 @@ body{
 #playBtn:hover{transform:scale(1.04)}
 #playBtn:active{transform:scale(.97)}
 </style>
-
-<div id="root">
+	<body>
+		<div id="root">
   <div id="topBar">
     <div class="sb"><span class="sl">Score</span><span class="sv" id="scoreEl">0</span></div>
     <div id="lvlBadge"><span id="lvlName">Novice</span><span id="lvlNum">Level 1</span></div>
@@ -126,7 +133,7 @@ const overlay=document.getElementById('overlay');
 const comboMsg=document.getElementById('comboMsg');
 
 const COLS=11,ROWS=16;
-const PALETTE=['#e63946','#f4a261','#2ec4b6','#4cc9f0','#8b5cf6','#22c55e','#f72585','#facc15'];
+const PALETTE=['#e63946','#f4a261','#f5f105','#05bcf5','#9971f5','#05fa5f','#f50573','#fac802'];
 const LVL_NAMES=['Novice','Rookie','Skilled','Expert','Master','Legend'];
 
 let W,H,BR,prevW=0;
@@ -423,3 +430,6 @@ window.addEventListener('resize',()=>{sizeUp();drawPreviews();});
 
 init();
 </script>
+
+	</body>
+</html>
